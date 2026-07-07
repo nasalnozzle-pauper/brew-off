@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pauper Meta Adherence Calculator</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body onload="loadPage()">
+    <script src="./PauperDataset.js"></script>
+    <script src="./main.js"></script>
+
+    <h1>Pauper Meta Adherence Calculator</h1>
+    <h2>(Formerly known as "The Spice-o-meter")</h2>
+    <br>
+    <h3>Enter your decklist</h2>
+    <h4>Please put every unique card on its own line.</h4>
+    <textarea id="deckSubmissionField" placeholder="Enter decklist here.&#10 4 Counterspell&#10 2 Quirion Ranger"></textarea>
+    <br>
+    <i>Format (Not case sensitive): </i>
+    <i>{Quantity} {Cardname}</i>
+    <i>{Quantity}x {Cardname}</i>
+    <i>Example: "4x COUNTERSPELL" or "4 Quirion Ranger"</i>
+    <br>
+    <button class="btn" onclick="analyseDecklist()">Analyse Deck</button>
+    <p id="entryErrorText" class="invisible errorText">Default error text</p>
+    <br>
+    <div id="metaSummaryBox" class="invisible">
+        <h2>Summary</h2>
+        <br>
+        <p>Meta adherence score:</p>
+        <b id="metaScoreText">Placeholder score here</b>
+        <br>
+        <p>Player type:</p>
+        <b id="metaRatingText">Placeholder type here</b>
+        <br>
+        <div id="metaBreakdown" class="invisible">
+            <h2>Breakdown</h2>
+            <p>The following cards are deducting points from your score:-</p>
+            <br>
+            <div id="metaCardContainer">
+
+            </div>
+        </div>
+        <br>
+        <h2>Statistics</h2>
+        <br>
+        <p id="totalCardCountText">Total cards: X</p>
+        <p id="matchingCardCountText">Meta cards: X</p>
+        <p id="matchingCardPercentageText">Percentage of Meta cards in deck: X%</p>
+
+    </div>
+
+</body>
+</html>
