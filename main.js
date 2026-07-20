@@ -31,8 +31,9 @@ function getInputtedDeckList() {
     }
     //Get the value of the deck input textarea.
     var inputtedList = deckSubmissionField.value;
-    if(inputtedList === '') {
-        //If the box is empty, throw an error to display
+
+    if(inputtedList.trim() === '') {
+        //If the box (trimmed to remove whitespace) is empty, throw an error to display
         throw Error('You did not enter anything, please enter a decklist in the above box') 
     }
     //Split the array by newlines to get the unique cards in an array and return it
