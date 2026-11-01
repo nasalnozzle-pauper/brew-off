@@ -12,7 +12,6 @@ const pauperDataset = [
 */
 
 const pauperDataset = [
-[
   {
     "name": "Lórien Revealed",
     "score": 0.4
@@ -1373,5 +1372,4 @@ const pauperDataset = [
     "name": "Galvanic Alchemist",
     "score": 0.05
   }
-]
 ]
